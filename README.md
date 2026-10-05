@@ -10,14 +10,16 @@
 
 **Live preview:** https://agentzlab.github.io/InavizionMedia-Remake/ (live when a redesign branch merges to `main`; artifact preview available now)
 
-![InaviZion Media redesign hero — light version](assets/screenshot.png)
+| Light | Dark |
+|---|---|
+| ![InaviZion Media redesign — light mode](assets/screenshot-light.png) | ![InaviZion Media redesign — dark mode](assets/screenshot-dark.png) |
 
 ## What's inside
 
-- **Hero** — "Make the vision impossible to ignore." with the red **ON AIR.** tally motif and a founding-years timeline (2004 · 2015 · 2018 · 2019); header light/dark toggle (light default)
+- **Hero** — "Make the vision impossible to ignore." with the **ON AIR.** tally motif, a broadcast chyron eyebrow, and a founding-years timeline (2004 · 2015 · 2018 · 2019); header light/dark toggle (light default)
+- **Broadcast ticker** — scrolling chyron strip with the brand names and ON AIR markers
 - **Watch theater** — all six YouTube videos from the original site, verified live: one per brand + Yolando's behind-the-scenes; thumbnail cards open a lightbox theater (iframe loads on open, no autoplay, Escape/backdrop close)
 - **Five-brand showcase** — Every Way Woman (2004), InaviZion Media (2015), Talk Show Land (2018), My Creative Space (2019, Burbank), Start The Possible — with real handles (@everywaywoman · @inavizionmedia · @talkshowland · @ineedmycreativespace · @startthepossible), each with a "Watch the video" link
-- **Five-brand showcase** — Every Way Woman (2004), InaviZion Media (2015), Talk Show Land (2018), My Creative Space (2019, Burbank), Start The Possible — with real handles (@everywaywoman · @inavizionmedia · @talkshowland · @ineedmycreativespace · @startthepossible)
 - **Studio section** — affordable creative space for filmmakers, photographers, podcasters, artists
 - **Coaching section** — Start The Possible: real-time beginner business coaching, no pre-recorded fluff, no upsells
 - **Founder story** — Yolando Mitchell Brown: coach, producer, teacher, business owner (@yolandomitchellbrown)
@@ -25,13 +27,13 @@
 
 ## Design language
 
-**Light-first broadcast** (Jon's call): white/ivory register with the live site's own black, white, and vivid red palette carried into the broadcast composition — condensed display type (Barlow Condensed) over Source Sans 3, red ON AIR tally motif. The dark charcoal-and-amber version remains intact for system dark mode, so both directions ship in one build. Deliberately distinct in composition from the sibling Starting Blocks redesign. Generated cinematic imagery, no baked-in text. No invented pricing or testimonials.
+**Light-first broadcast** (Jon's call): the site's accent register is the **dark-pink aurora gradient** (deep red → hot pink, drawn from the Business of Creativity script) — buttons, play marks, timeline years, kickers, aurora headline words, and the footer all carry it. The wordmark is set in **Orbitron** ("INAVIZION" in near-black/white with a silver Z, "MEDIA" in the aurora gradient) in both themes. Display type is Barlow Condensed over Source Sans 3, with broadcast chyron/timecode eyebrows ("00:01 · ON AIR"), a news ticker, tally-light pulse, scroll-spy nav, and a back-to-top control. Sharp edges throughout — deliberately distinct in composition from the sibling Starting Blocks redesign. Generated cinematic imagery, no baked-in text. No invented pricing or testimonials.
 
 ## Tech stack
 
 | Layer | Choice |
 |---|---|
-| Page | Single self-contained `index.html` (light default, dark via `prefers-color-scheme`) |
+| Page | Single self-contained `index.html` (light default, dark via header toggle) |
 | Hosting | GitHub Pages from `main`, no build step |
 
 ## Project structure
@@ -39,7 +41,8 @@
 ```
 ├── index.html                  # the site (self-contained; light + dark mode)
 ├── assets/
-│   └── screenshot.png          # README hero + link-preview image (refresh on every build change)
+│   ├── screenshot-light.png    # README hero — light mode (refresh on every build change)
+│   └── screenshot-dark.png     # README hero — dark mode (refresh on every build change)
 ├── docs/
 │   ├── CURSOR-BLUEPRINT.md     # builder briefing for future work
 │   ├── context-block.md        # live-site harvest (the spec)
