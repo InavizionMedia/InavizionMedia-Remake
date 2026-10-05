@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -21,7 +21,7 @@
       --hero-overlay-mobile:linear-gradient(0deg,#ffffff 0%,rgba(255,255,255,.8) 64%,rgba(255,255,255,.48) 100%);--thumb-bg:#e3e4e7;
       --max:1180px;--pad:clamp(20px,5vw,72px);--display:"Barlow Condensed",sans-serif;--body:"Source Sans 3",sans-serif;
     }
-    @media(prefers-color-scheme:dark){:root{--bg:#0e0d0c;--bg-deep:#080807;--surface:rgba(24,22,19,.78);--surface-solid:#1d1a17;--text:#fff8eb;--muted:#cbbfac;--line:rgba(255,248,235,.15);--accent:#efb44b;--accent-ink:#171109;--accent-glow:rgba(239,180,75,.55);--header:rgba(13,12,11,.94);--mobile-panel:rgba(10,9,8,.97);--preloader:#0a0908;--load-track:#3e3629;--hero-bg:#0b0b0a;--hero-copy:#eee4d4;--hero-stat-line:rgba(255,255,255,.22);--hero-stat-text:#d5c9b8;--hero-overlay:linear-gradient(90deg,rgba(6,6,5,.96) 0%,rgba(6,6,5,.68) 46%,rgba(6,6,5,.2) 72%),linear-gradient(0deg,#0d0c0b 0%,transparent 45%);--hero-overlay-mobile:linear-gradient(0deg,#0d0c0b 0%,rgba(6,6,5,.68) 62%,rgba(6,6,5,.5) 100%);--thumb-bg:#201c18}}
+    html[data-theme="dark"]{color-scheme:dark;--bg:#0e0d0c;--bg-deep:#080807;--surface:rgba(24,22,19,.78);--surface-solid:#1d1a17;--text:#fff8eb;--muted:#cbbfac;--line:rgba(255,248,235,.15);--accent:#efb44b;--accent-ink:#171109;--accent-glow:rgba(239,180,75,.55);--header:rgba(13,12,11,.94);--mobile-panel:rgba(10,9,8,.97);--preloader:#0a0908;--load-track:#3e3629;--hero-bg:#0b0b0a;--hero-copy:#eee4d4;--hero-stat-line:rgba(255,255,255,.22);--hero-stat-text:#d5c9b8;--hero-overlay:linear-gradient(90deg,rgba(6,6,5,.96) 0%,rgba(6,6,5,.68) 46%,rgba(6,6,5,.2) 72%),linear-gradient(0deg,#0d0c0b 0%,transparent 45%);--hero-overlay-mobile:linear-gradient(0deg,#0d0c0b 0%,rgba(6,6,5,.68) 62%,rgba(6,6,5,.5) 100%);--thumb-bg:#201c18}
     *{box-sizing:border-box}
     html{scroll-behavior:smooth;overflow-x:hidden}
     body{margin:0;background:var(--bg);color:var(--text);font-family:var(--body);font-size:17px;line-height:1.6;overflow-x:hidden}
@@ -41,6 +41,7 @@
     .nav-wrap{width:min(var(--max),calc(100% - 2*var(--pad)));margin:auto;height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
     .desktop-nav{display:flex;align-items:center;gap:22px}.desktop-nav a{text-decoration:none;font-size:15px;min-height:44px;display:grid;place-items:center}.desktop-nav a:hover{color:var(--accent)}
     .nav-cta,.btn-primary{background:var(--accent);color:var(--accent-ink)!important;padding:11px 17px;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;min-height:48px;border:1px solid var(--accent)}
+    .header-actions{display:flex;align-items:center;gap:10px}.theme-toggle{min-height:44px;padding:8px 11px;border:1px solid var(--line);background:transparent;color:var(--text);display:inline-flex;align-items:center;gap:8px;cursor:pointer;font-size:14px;font-weight:600}.theme-toggle:hover{border-color:var(--accent);color:var(--accent)}.theme-toggle svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.theme-icon-sun{display:none}html[data-theme="dark"] .theme-icon-moon{display:none}html[data-theme="dark"] .theme-icon-sun{display:block}
     .menu-btn{display:none;border:1px solid var(--line);background:transparent;color:var(--text);width:48px;height:48px;align-items:center;justify-content:center;cursor:pointer}.menu-btn span,.menu-btn:before,.menu-btn:after{content:"";display:block;width:20px;height:1px;background:currentColor;position:absolute}.menu-btn:before{transform:translateY(-6px)}.menu-btn:after{transform:translateY(6px)}
     .mobile-panel{position:fixed;z-index:99;inset:0;background:var(--mobile-panel);display:none;padding:104px var(--pad) 30px;overflow:auto}.mobile-panel.open{display:block}.mobile-panel nav{display:grid;gap:4px}.mobile-panel a,.accordion-btn{font:600 clamp(28px,9vw,46px)/1.1 var(--display);text-decoration:none;min-height:58px;display:flex;align-items:center;border:0;background:none;color:var(--text);padding:0;width:100%;text-align:left}.accordion-btn{justify-content:space-between}.accordion-btn:after{content:"+";color:var(--accent)}.accordion-btn[aria-expanded=true]:after{content:"−"}.submenu{display:none;padding:4px 0 16px 22px;border-left:1px solid var(--line)}.submenu.open{display:grid}.submenu a{font-size:22px;min-height:48px}
     main{display:block}.wrap{width:min(var(--max),calc(100% - 2*var(--pad)));margin:auto}
@@ -63,7 +64,7 @@
     footer{padding:32px 0 42px;background:var(--bg-deep);border-top:1px solid var(--line)}.footer-row{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}.footer-row p{margin:0;color:var(--muted);font-size:14px}
     .reveal{opacity:1;transform:none}.reveal.visible{animation:reveal-in .65s ease both}@keyframes reveal-in{from{opacity:.7;transform:translateY(10px)}to{opacity:1;transform:none}}
     @media(max-width:900px){.desktop-nav{display:none}.menu-btn{display:flex}.section-head{grid-template-columns:1fr}.thesis-grid{grid-template-columns:repeat(2,1fr)}.principle:nth-child(3){border-left:0}.principle:nth-child(n+3){border-top:1px solid var(--line)}.brands-grid{grid-template-columns:1fr}.brand-card,.brand-card:nth-child(n){grid-column:auto}.feature-grid{grid-template-columns:1fr}.feature-image{min-height:430px}.coaching-grid,.about-grid,.final-grid{grid-template-columns:1fr}.feature-copy{padding:64px var(--pad)}}
-    @media(max-width:560px){body{font-size:16px}.nav-wrap{height:68px}.brand-name{font-size:19px}.brand .tally{font-size:10px;gap:6px}.hero{padding-top:118px}.hero-media img{object-position:58% center}.hero-media:after{background:var(--hero-overlay-mobile)}.stats{grid-template-columns:repeat(2,1fr);margin-top:50px}.stat:last-child{grid-column:span 2}.actions{display:grid}.actions .btn,.actions .btn-primary{width:100%}.thesis-grid{grid-template-columns:1fr}.principle,.principle+.principle{padding:25px 0;border-left:0;border-top:1px solid var(--line)}.principle:first-child{border-top:0}.num{margin-bottom:18px}.thumb{height:230px}.meta{align-items:start}.feature-image{min-height:360px}.feature-copy{padding:54px var(--pad)}.contact-panel{padding:22px}.footer-row{align-items:flex-start;flex-direction:column}}
+    @media(max-width:560px){body{font-size:16px}.nav-wrap{height:68px}.brand-name{font-size:19px}.brand .tally{font-size:10px;gap:6px}.header-actions{gap:7px}.theme-toggle{width:44px;height:44px;min-height:44px;padding:0;justify-content:center}.theme-label{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.menu-btn{width:44px;height:44px}.hero{padding-top:118px}.hero-media img{object-position:58% center}.hero-media:after{background:var(--hero-overlay-mobile)}.stats{grid-template-columns:repeat(2,1fr);margin-top:50px}.stat:last-child{grid-column:span 2}.actions{display:grid}.actions .btn,.actions .btn-primary{width:100%}.thesis-grid{grid-template-columns:1fr}.principle,.principle+.principle{padding:25px 0;border-left:0;border-top:1px solid var(--line)}.principle:first-child{border-top:0}.num{margin-bottom:18px}.thumb{height:230px}.meta{align-items:start}.feature-image{min-height:360px}.feature-copy{padding:54px var(--pad)}.contact-panel{padding:22px}.footer-row{align-items:flex-start;flex-direction:column}}
     @media(min-width:901px){.parallax{will-change:transform}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.preloader,.reveal,.thumb img{transition:none!important}.loadline:after{animation:none;width:100%}.reveal{opacity:1;transform:none}.parallax{transform:none!important}}
     @media print{header,.preloader,.mobile-panel{display:none!important}.hero{min-height:auto;padding-top:40px}.hero-media{opacity:.35}.reveal{opacity:1;transform:none}}
@@ -77,7 +78,10 @@
   <div class="nav-wrap">
     <a class="brand" href="#top" aria-label="InaviZion Media home"><span class="brand-name">INAVIZION MEDIA</span><span class="tally"><span class="tally-dot"></span>On air.</span></a>
     <nav class="desktop-nav" aria-label="Primary"><a href="#shows">Shows</a><a href="#studio">Studio</a><a href="#coaching">Coaching</a><a href="#about">About</a><a class="nav-cta" href="#contact">Contact</a></nav>
-    <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span></button>
+    <div class="header-actions">
+      <button class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false" title="Switch to dark theme"><svg class="theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 15.1A8.5 8.5 0 0 1 8.9 3.6 8.5 8.5 0 1 0 20.4 15.1Z"/></svg><svg class="theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"/></svg><span class="theme-label">Dark</span></button>
+      <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span></button>
+    </div>
   </div>
 </header>
 <div class="mobile-panel" id="mobile-menu">
@@ -155,6 +159,22 @@
 <footer><div class="wrap footer-row"><div class="brand"><span class="brand-name">INAVIZION MEDIA</span><span class="tally"><span class="tally-dot"></span>On air.</span></div><p>Original OTT content · Independent production · Creative space</p></div></footer>
 <script>
 (function(){
+  var root=document.documentElement;
+  var themeBtn=document.querySelector('.theme-toggle');
+  var themeLabel=themeBtn.querySelector('.theme-label');
+  var themeMeta=document.querySelector('meta[name="theme-color"]');
+  function setTheme(theme){
+    var dark=theme==='dark';
+    root.setAttribute('data-theme',dark?'dark':'light');
+    themeBtn.setAttribute('aria-pressed',String(dark));
+    themeBtn.setAttribute('aria-label',dark?'Switch to light theme':'Switch to dark theme');
+    themeBtn.setAttribute('title',dark?'Switch to light theme':'Switch to dark theme');
+    themeLabel.textContent=dark?'Light':'Dark';
+    if(themeMeta)themeMeta.setAttribute('content',dark?'#0e0d0c':'#ffffff');
+  }
+  setTheme('light');
+  themeBtn.addEventListener('click',function(){setTheme(root.getAttribute('data-theme')==='dark'?'light':'dark')});
+
   var pre=document.querySelector('.preloader');
   function dismiss(){if(pre)pre.classList.add('done')}
   if(document.readyState==='complete')dismiss();else window.addEventListener('load',dismiss,{once:true});
