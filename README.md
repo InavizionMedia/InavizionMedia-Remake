@@ -14,7 +14,9 @@
 
 ## What's inside
 
-- **Hero** — "Make the vision impossible to ignore." with the red **ON AIR.** tally motif and a founding-years timeline (2004 · 2015 · 2018 · 2019)
+- **Hero** — "Make the vision impossible to ignore." with the red **ON AIR.** tally motif and a founding-years timeline (2004 · 2015 · 2018 · 2019); header light/dark toggle (light default)
+- **Watch theater** — all six YouTube videos from the original site, verified live: one per brand + Yolando's behind-the-scenes; thumbnail cards open a lightbox theater (iframe loads on open, no autoplay, Escape/backdrop close)
+- **Five-brand showcase** — Every Way Woman (2004), InaviZion Media (2015), Talk Show Land (2018), My Creative Space (2019, Burbank), Start The Possible — with real handles (@everywaywoman · @inavizionmedia · @talkshowland · @ineedmycreativespace · @startthepossible), each with a "Watch the video" link
 - **Five-brand showcase** — Every Way Woman (2004), InaviZion Media (2015), Talk Show Land (2018), My Creative Space (2019, Burbank), Start The Possible — with real handles (@everywaywoman · @inavizionmedia · @talkshowland · @ineedmycreativespace · @startthepossible)
 - **Studio section** — affordable creative space for filmmakers, photographers, podcasters, artists
 - **Coaching section** — Start The Possible: real-time beginner business coaching, no pre-recorded fluff, no upsells
