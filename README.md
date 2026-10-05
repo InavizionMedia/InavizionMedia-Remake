@@ -1,14 +1,15 @@
 # InaviZion Media — Redesign Draft
+**Branch policy:** work happens on the latest version branch — list all branches first, never assume the GitHub default is current. Working line: `main`.
 
 > A full redesign draft of **inavizionmedia.com** — Yolando Mitchell Brown's media company: original talk shows, an affordable creative studio, and education for creative entrepreneurs.
 
-[![Pages](https://img.shields.io/badge/Pages-live-brightgreen)](https://agentzlab.github.io/InavizionMedia-Remake/)
-[![Last commit](https://img.shields.io/github/last-commit/agentzlab/InavizionMedia-Remake)](https://github.com/agentzlab/InavizionMedia-Remake/commits/redesign-v2)
-[![Repo size](https://img.shields.io/github/repo-size/agentzlab/InavizionMedia-Remake)](https://github.com/agentzlab/InavizionMedia-Remake)
-[![Static site](https://img.shields.io/badge/site-static-blue)](https://agentzlab.github.io/InavizionMedia-Remake/)
-[![Preview](https://img.shields.io/badge/Preview-live-red)](https://agentzlab.github.io/InavizionMedia-Remake/)
+[![Pages](https://img.shields.io/badge/Pages-live-brightgreen)](https://inavizionmedia.github.io/InavizionMedia-Remake/)
+[![Last commit](https://img.shields.io/github/last-commit/InavizionMedia/InavizionMedia-Remake)](https://github.com/InavizionMedia/InavizionMedia-Remake/commits/main)
+[![Repo size](https://img.shields.io/github/repo-size/InavizionMedia/InavizionMedia-Remake)](https://github.com/InavizionMedia/InavizionMedia-Remake)
+[![Static site](https://img.shields.io/badge/site-static-blue)](https://inavizionmedia.github.io/InavizionMedia-Remake/)
+[![Preview](https://img.shields.io/badge/Preview-live-red)](https://inavizionmedia.github.io/InavizionMedia-Remake/)
 
-**Live preview:** https://agentzlab.github.io/InavizionMedia-Remake/ (live when a redesign branch merges to `main`; artifact preview available now)
+**Live preview:** https://inavizionmedia.github.io/InavizionMedia-Remake/
 
 | Light | Dark |
 |---|---|
@@ -55,7 +56,8 @@
 ## Workflow
 
 - `main` = the live preview. Nothing here touches the live site or goes to Yolando until Jon approves.
-- `redesign-v2` = current lead branch (light-first).
-- `redesign-v1` = dark charcoal-and-amber alt.
+- `IvznMedia-v3` (dark default + red gradient) — merged to main.
+- `IvznMedia-v2` — superseded dev branch.
+- `IvznMedia-v1` — frozen restore point.
 - Redesign mode: the existing site is the spec — fidelity first, deviations flagged.
 - Screenshots refresh on every build change — no stale screenshots.
